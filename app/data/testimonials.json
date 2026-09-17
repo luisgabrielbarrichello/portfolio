@@ -1,0 +1,22 @@
+[
+    {
+        "name": "John Doe",
+        "role": "Desenvolvedor",
+        "quote": "Excelente trabalho, recomendo!"
+    },
+    {
+        "name": "Jane Smith",
+        "role": "Designer",
+        "quote": "Trabalho de qualidade, altamente recomendado!"
+    },
+    {
+        "name": "Carlos Silva",
+        "role": "Gerente de Projeto",
+        "quote": "Profissional confiável e competente."
+    },
+    {
+        "name": "Maria Oliveira",
+        "role": "Empresária",
+        "quote": "Superou minhas expectativas, ótimo resultado!"
+    }
+]

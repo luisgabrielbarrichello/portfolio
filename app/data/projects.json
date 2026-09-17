@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Landing Page para Nutricionista",
+        "description": "Landing page moderna e responsiva com foco em geração de leads e otimização para SEO, projetada para fortalecer a presença digital de um profissional de nutrição.",
+        "image_url": "/assets/img/projects/lp-nutricionista.png",
+        "technologies": [
+            "React",
+            "TailwindCSS",
+            "JavaScript"
+        ],
+        "homepage": "https://landing-page-nutricionista-guilherme-moras.vercel.app/",
+        "url_github": "https://github.com/LuisBarrichello/Landing-Page---Nutricionista-Guilherme-Moras",
+        "featured": true,
+        "case_study": {
+            "problem": "O cliente, um nutricionista, possuía um site desatualizado, com baixa performance e que não refletia sua nova identidade visual focada em nutrição esportiva.",
+            "solution": "Desenvolvi uma landing page totalmente nova a partir do zero, utilizando React e Tailwind CSS para criar um design moderno, rápido e totalmente responsivo. A estrutura foi pensada para guiar o usuário e facilitar a conversão, alinhada às novas inspirações e ao público-alvo do cliente.",
+            "learnings": "Este foi meu primeiro projeto aplicando Tailwind CSS em um contexto profissional, o que solidificou minhas habilidades no framework. Aprimorei também minhas práticas em componentização com React e na criação de layouts 'mobile-first'."
+        },
+        "category": "Front End"
+    },
+    {
+        "title": "Steel Sales Calculator",
+        "description": "O projeto é uma calculado para Vendedores e pessoas interessadas nos calculos de construção civil, onde as pessoas tendem a ter maior dificuldade de entendimento. O projeto também é para eu conhecer e aprender o básico bootstrap, além disso, praticar meus conhecimentos.",
+        "image_url": "/assets/img/projects/steel-sales-calculator.png",
+        "technologies": [
+            "React",
+            "Typescript",
+            "Bootstrap"
+        ],
+        "homepage": "https://steel-sales-calculator.vercel.app/",
+        "url_github": "https://github.com/LuisBarrichello/SteelSalesCalculator",
+        "featured": false,
+        "case_study": {
+            "problem": "",
+            "solution": "",
+            "learnings": ""
+        },
+        "category": "Front End"
+    },
+    {
+        "title": "Sistema de Gestão do Museu Magma",
+        "description": "Sistema de gestão completo (ERP/PDV) construído para o Museu Magma. Inclui controle de inventário, ponto de venda (PDV), gerenciamento de clientes, usuários, permissões granulares e relatórios de lucratividade.",
+        "image_url": "/assets/img/projects/museu-magma-dashboard.png",
+        "technologies": [
+            "React",
+            "Django REST Framework",
+            "PostgreSQL",
+            "JavaScript (ES6+)",
+            "CSS (Responsive)",
+            "Python",
+            "Axios",
+            "Chart.js",
+            "JWT"
+        ],
+        "homepage": "https://sistemamuseumagma.vercel.app/",
+        "url_github": "https://github.com/LuisBarrichello/museu-magma-frontend",
+        "featured": true,
+        "case_study": {
+            "problem": "O museu utilizava um sistema monolítico antigo, lento e não responsivo, que dificultava o gerenciamento diário do inventário e das vendas, sem controle de permissões de acesso.",
+            "solution": "Refatoração completa da arquitetura. O backend foi recriado como uma API RESTful (Django/Python) e o frontend foi construído do zero como uma Single-Page Application (React), resultando em um sistema rápido, seguro e totalmente responsivo.",
+            "learnings": "Domínio em arquitetura de microsserviços, implementação de autenticação JWT com token refresh, criação de permissões granulares no backend (DRF), gerenciamento de estado global no frontend (React Context) e deploy completo de uma aplicação Full Stack em nuvem (Vercel, Render, Neon)."
+        },
+        "category": "Full Stack"
+    }
+]
