@@ -6,13 +6,13 @@ interface Testimonial {
     quote: string;
 }
 
-//TODO: Nenhum depoimento real cadastrado ainda.
+//TODO: No real testimonials yet
 const testimonials: Testimonial[] = testimonialsData;
 
 function TestimonialSection() {
     return (
         <section
-            id="experiencias"
+            id="testimonials"
             className="py-24 md:py-36 bg-gray-50 dark:bg-dark-20"
             aria-labelledby="testimonials-heading">
             <div className="editorial-container">
@@ -30,13 +30,14 @@ function TestimonialSection() {
                                 “{testimonials[0].quote}”
                             </p>
                             <footer className="mt-6 text-sm text-gray-500 dark:text-gray-500">
-                                {testimonials[0].name} —{' '}
-                                {testimonials[0].role}
+                                {testimonials[0].name} — {testimonials[0].role}
                             </footer>
                         </blockquote>
                         <div className="flex flex-col gap-10">
                             {testimonials.slice(1, 3).map((t) => (
-                                <blockquote key={t.name} className="hairline pt-6">
+                                <blockquote
+                                    key={t.name}
+                                    className="hairline pt-6">
                                     <p className="text-base text-gray-700 dark:text-gray-300">
                                         “{t.quote}”
                                     </p>

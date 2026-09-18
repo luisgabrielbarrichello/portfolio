@@ -42,7 +42,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                         onClick={onClose}
                         className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:hover:text-white"
                         aria-label="Fechar modal">
-                        {/* SVG de um ícone 'X' para fechar */}
+                        {/* Close icon */}
                         <svg
                             className="w-6 h-6"
                             fill="none"

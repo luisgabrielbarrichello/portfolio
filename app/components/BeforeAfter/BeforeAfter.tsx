@@ -29,7 +29,7 @@ function BeforeAfter() {
 
     return (
         <section
-            id="uma-nova-perspectiva"
+            id="new-perspective"
             className="py-24 md:py-36 bg-gray-50 dark:bg-dark-20"
             aria-labelledby="beforeafter-heading">
             <div className="editorial-container">
@@ -54,7 +54,7 @@ function BeforeAfter() {
                     onPointerMove={onPointerMove}
                     onPointerUp={onPointerUp}
                     className="relative aspect-[4/3] sm:aspect-video max-w-5xl mx-auto rounded-none sm:rounded-lg overflow-hidden border-y sm:border border-gray-200 dark:border-gray-800 select-none cursor-ew-resize touch-none shadow-xl shadow-gray-300/40 dark:shadow-black/40">
-                    {/* DEPOIS (base) */}
+                    {/* AFTER (base) */}
                     <div className="absolute inset-0 bg-white dark:bg-dark-10 p-8 flex flex-col justify-center gap-4">
                         <span className="text-[10px] uppercase tracking-widest text-brand font-semibold">
                             Depois
@@ -68,7 +68,7 @@ function BeforeAfter() {
                         </div>
                     </div>
 
-                    {/* ANTES (recortado por clip) */}
+                    {/* BEFORE (clipped) */}
                     <div
                         className="absolute inset-0 bg-gray-200 dark:bg-gray-900 p-8 flex flex-col justify-center gap-3 overflow-hidden"
                         style={{

@@ -1,7 +1,7 @@
 'use client';
-import { useState, useEffect } from 'react';
-import clsx from 'clsx';
 import { getWhatsappLink } from '@/app/lib/whatsapp';
+import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ function Header() {
         { to: '#my-services', label: 'Serviços' },
         { to: '#projects', label: 'Projetos' },
         { to: '#faq', label: 'FAQ' },
-        { to: '#orcamento', label: 'Contato' },
+        { to: '#quote', label: 'Contato' },
     ];
 
     const navLinkClasses =

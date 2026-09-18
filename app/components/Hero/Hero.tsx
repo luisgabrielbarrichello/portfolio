@@ -15,8 +15,8 @@ function Hero() {
                 <div className="mt-6 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                     <h1 className="text-[2.6rem] leading-[1.05] sm:text-6xl md:text-7xl lg:text-[5.5rem] font-black text-gray-900 dark:text-white tracking-tight max-w-4xl">
                         Seu negócio precisa de mais{' '}
-                        <span className="text-brand">contatos</span>, não só
-                        de um site bonito.
+                        <span className="text-brand">contatos</span>, não só de
+                        um site bonito.
                     </h1>
                     <p className="max-w-xs text-base text-gray-600 dark:text-gray-400 lg:pb-2">
                         Crio sites e landing pages para pequenos negócios
@@ -43,7 +43,7 @@ function Hero() {
                 </div>
             </div>
 
-            {/* Mockup grande, parcialmente cortado pela viewport */}
+            {/* Large mockup, partially cropped by viewport */}
             <div className="relative mt-14 md:mt-20">
                 <div className="editorial-container">
                     <div className="relative rounded-t-xl border border-b-0 border-gray-200 dark:border-gray-800 bg-white dark:bg-dark-20 shadow-2xl shadow-gray-300/50 dark:shadow-black/50 overflow-hidden -mb-24 md:-mb-40">

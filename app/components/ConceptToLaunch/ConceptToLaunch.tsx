@@ -3,7 +3,7 @@ const stages = ['Ideia', 'Estrutura', 'Interface', 'Experiência final'];
 function ConceptToLaunch() {
     return (
         <section
-            id="do-conceito-ao-ar"
+            id="concept-to-launch"
             className="py-24 md:py-36 bg-offwhite dark:bg-dark-10"
             aria-labelledby="concept-heading">
             <div className="editorial-container">

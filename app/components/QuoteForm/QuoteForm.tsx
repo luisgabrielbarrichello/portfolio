@@ -38,12 +38,14 @@ function QuoteForm() {
 
     return (
         <section
-            id="orcamento"
+            id="quote"
             className="py-20 md:py-28 bg-gray-50 dark:bg-dark-20"
             aria-labelledby="quote-heading">
             <div className="editorial-container max-w-xl">
                 <span className="eyebrow block text-center">Contato</span>
-                <h2 id="quote-heading" className="mt-4 text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center">
+                <h2
+                    id="quote-heading"
+                    className="mt-4 text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center">
                     Solicitar orçamento
                 </h2>
                 <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
@@ -52,7 +54,9 @@ function QuoteForm() {
                 </p>
                 <form onSubmit={handleSubmit} className="mt-8 space-y-4">
                     <div>
-                        <label htmlFor="name" className="block text-sm font-medium mb-1">
+                        <label
+                            htmlFor="name"
+                            className="block text-sm font-medium mb-1">
                             Nome
                         </label>
                         <input
@@ -64,7 +68,9 @@ function QuoteForm() {
                         />
                     </div>
                     <div>
-                        <label htmlFor="company" className="block text-sm font-medium mb-1">
+                        <label
+                            htmlFor="company"
+                            className="block text-sm font-medium mb-1">
                             Empresa
                         </label>
                         <input
@@ -75,7 +81,9 @@ function QuoteForm() {
                         />
                     </div>
                     <div>
-                        <label htmlFor="whatsapp" className="block text-sm font-medium mb-1">
+                        <label
+                            htmlFor="whatsapp"
+                            className="block text-sm font-medium mb-1">
                             WhatsApp
                         </label>
                         <input
@@ -87,7 +95,9 @@ function QuoteForm() {
                         />
                     </div>
                     <div>
-                        <label htmlFor="projectType" className="block text-sm font-medium mb-1">
+                        <label
+                            htmlFor="projectType"
+                            className="block text-sm font-medium mb-1">
                             Tipo de projeto
                         </label>
                         <select
@@ -103,7 +113,9 @@ function QuoteForm() {
                         </select>
                     </div>
                     <div>
-                        <label htmlFor="message" className="block text-sm font-medium mb-1">
+                        <label
+                            htmlFor="message"
+                            className="block text-sm font-medium mb-1">
                             Mensagem (opcional)
                         </label>
                         <textarea

@@ -19,7 +19,7 @@ const supportPoints = [
 function BenefitSection() {
     return (
         <section
-            id="alem-da-primeira-impressao"
+            id="concept-to-launch"
             className="py-24 md:py-36 bg-white dark:bg-dark-10 overflow-hidden"
             aria-labelledby="benefit-heading">
             <div className="editorial-container">
@@ -34,9 +34,8 @@ function BenefitSection() {
 
             <div className="editorial-container mt-10 md:mt-16">
                 <p className="max-w-lg text-lg text-gray-600 dark:text-gray-400">
-                    Um site não serve só para parecer bonito. Ele precisa
-                    fazer o visitante confiar o suficiente para chamar no
-                    WhatsApp.
+                    Um site não serve só para parecer bonito. Ele precisa fazer
+                    o visitante confiar o suficiente para chamar no WhatsApp.
                 </p>
 
                 <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
