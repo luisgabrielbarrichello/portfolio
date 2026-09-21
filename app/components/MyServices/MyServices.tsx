@@ -60,7 +60,7 @@ function MyServices() {
                                 href={getWhatsappLink()}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="md:col-span-2 md:text-right text-sm font-semibold text-brand hover:underline whitespace-nowrap">
+                                className="md:col-span-2 md:text-right text-sm font-semibold text-brand hover:underline wrap">
                                 {service.cta} →
                             </a>
                         </div>

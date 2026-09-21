@@ -25,10 +25,9 @@ function BenefitSection() {
             <div className="editorial-container">
                 <span className="eyebrow">02 / Além da primeira impressão</span>
             </div>
-
             <h2
                 id="benefit-heading"
-                className="mt-6 text-center text-[4rem] sm:text-[6rem] md:text-[9rem] lg:text-[11rem] font-black tracking-tighter leading-[0.85] text-gray-900 dark:text-white select-none">
+                className="mt-6 text-center text-[14.5vw] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[11rem] font-black tracking-tighter leading-[0.85] text-gray-900 dark:text-white select-none max-w-full ">
                 CONFIANÇA
             </h2>
 

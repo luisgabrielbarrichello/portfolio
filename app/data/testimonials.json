@@ -1,22 +1,17 @@
 [
     {
-        "name": "John Doe",
-        "role": "Desenvolvedor",
-        "quote": "Excelente trabalho, recomendo!"
+        "name": "Guilherme Moras",
+        "role": "Nutricionista",
+        "quote": "Excelente profissional, superou minhas expectativas! Recomendo fortemente."
     },
     {
-        "name": "Jane Smith",
-        "role": "Designer",
-        "quote": "Trabalho de qualidade, altamente recomendado!"
+        "name": "Bruno Carvalho",
+        "role": "Vendedor",
+        "quote": "Steel Sales Calculator "
     },
     {
         "name": "Carlos Silva",
         "role": "Gerente de Projeto",
         "quote": "Profissional confiável e competente."
-    },
-    {
-        "name": "Maria Oliveira",
-        "role": "Empresária",
-        "quote": "Superou minhas expectativas, ótimo resultado!"
     }
 ]

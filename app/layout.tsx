@@ -1,5 +1,4 @@
-// @ts-expect-error Next.js processes global CSS imports at build time
-import './globals.css';
+import './global.css';
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import Header from './components/common/Header/Header';
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
         'Sites profissionais',
         'Sites para pequenos negócios',
         'Criação de sites Laranjal Paulista',
-        'Luís Gabriel Barrichello',
+        'LB.DEV',
     ],
     authors: [{ name: 'Luís Gabriel Barrichello', url: baseUrl }],
     creator: 'Luís Gabriel Barrichello',

@@ -28,6 +28,16 @@ function Header() {
     const navLinkClasses =
         'relative cursor-pointer font-medium text-dark dark:text-white hover:text-brand dark:hover:text-brand transition-colors duration-300';
 
+    const buttonCTA = (
+        <a
+            href={getWhatsappLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:inline-flex shrink-0 whitespace-nowrap items-center px-4 py-2 rounded-md text-sm font-semibold bg-brand text-white hover:opacity-90 transition-opacity">
+            Solicitar orçamento
+        </a>
+    );
+
     return (
         <header
             className={clsx(
@@ -36,7 +46,7 @@ function Header() {
                     ? 'bg-white/90 dark:bg-dark-10/90 backdrop-blur-md shadow-sm shadow-gray-200/50 dark:shadow-black/30'
                     : 'bg-transparent',
             )}>
-            <nav className="w-full h-16 flex items-center justify-between gap-x-4">
+            <nav className="w-full h-16 flex items-center justify-between gap-x-6">
                 <div className="shrink-0">
                     <a
                         href="https://www.linkedin.com/in/luisgabrielbarrichello/"
@@ -50,8 +60,8 @@ function Header() {
                             .dev
                         </span>
 
-                        <div className="h-8 w-[1px] bg-gray-300 dark:bg-gray-700 hidden sm:block" />
-                        <span className="text-xs sm:text-sm font-bold text-gray-500 dark:text-gray-300 max-w-64 leading-tight hidden sm:block">
+                        <div className="h-8 w-[1px] bg-gray-300 dark:bg-gray-700 hidden lg:block" />
+                        <span className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-300 max-w-[170px] sm:max-w-56 lg:max-w-64 leading-tight hidden lg:block">
                             Sites e experiências digitais que fazem seu negócio
                             crescer.
                         </span>
@@ -60,36 +70,60 @@ function Header() {
 
                 <div
                     className={clsx(
-                        'absolute md:static top-16 left-0 w-full md:w-auto',
-                        'bg-white/95 dark:bg-dark-10/95 md:bg-transparent dark:md:bg-transparent',
-                        'transition-transform duration-300 ease-in-out md:transform-none',
+                        // O QUE MUDOU: h-[calc(100vh-4rem)] e bg-white sólido para cobrir a tela inteira abaixo da barra
+                        'fixed md:static top-16 left-0 w-full h-[calc(100vh-4rem)] md:h-auto',
+                        'bg-white dark:bg-dark-10 md:bg-transparent dark:md:bg-transparent',
+                        'transition-all duration-300 ease-in-out md:transform-none overflow-y-auto md:overflow-visible',
                         {
-                            'translate-y-0': isMenuOpen,
-                            '-translate-y-[150%] md:translate-y-0': !isMenuOpen,
+                            'translate-y-0 opacity-100 visible': isMenuOpen,
+                            '-translate-y-full opacity-0 invisible md:opacity-100 md:visible md:translate-y-0':
+                                !isMenuOpen,
                         },
                     )}>
-                    <ul className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 lg:gap-10 w-full h-screen md:h-auto">
+                    <ul className="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-4 lg:gap-10 w-full min-h-full py-8 md:py-0 px-6">
+                        {/* Texto no topo do menu mobile */}
+                        <li className="md:hidden text-center mb-2">
+                            <p className="text-xs font-bold text-gray-500 dark:text-gray-300 max-w-[220px] leading-snug mx-auto pb-4 border-b border-gray-200 dark:border-gray-800">
+                                Sites e experiências digitais que fazem seu
+                                negócio crescer.
+                            </p>
+                        </li>
+
+                        {/* Links de navegação */}
                         {navLinks.map((link) => (
                             <li key={link.to}>
                                 <a
                                     href={link.to}
                                     onClick={() => setIsMenuOpen(false)}
-                                    className={`${navLinkClasses} group text-lg block py-2 md:py-0`}>
+                                    className={`${navLinkClasses} group text-lg block py-1 md:py-0`}>
                                     <span>{link.label}</span>
                                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
                                 </a>
                             </li>
                         ))}
+
+                        {/* Botão dentro do menu mobile */}
+                        <li className="mt-4 md:hidden">
+                            <a
+                                href={getWhatsappLink()}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center whitespace-nowrap px-5 py-2.5 rounded-md text-sm font-semibold bg-brand text-white hover:opacity-90 transition-opacity">
+                                Solicitar orçamento
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <a
-                    href={getWhatsappLink()}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden md:inline-flex items-center px-4 py-2 rounded-md text-sm font-semibold bg-brand text-white hover:opacity-90 transition-opacity">
-                    Quero melhorar minha presença online
-                </a>
+                <button>
+                    <a
+                        href={getWhatsappLink()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hidden md:inline-flex items-center shrink-0 whitespace-nowrap px-3 lg:px-4 py-2 rounded-md text-xs lg:text-sm font-semibold bg-brand text-white hover:opacity-90 transition-opacity">
+                        Solicitar orçamento
+                    </a>
+                </button>
 
                 <div className="md:hidden z-50">
                     <button
