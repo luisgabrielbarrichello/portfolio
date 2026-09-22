@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        scroll-behavior: smooth;
-    }
-
     section[id] {
         @apply scroll-mt-14 md:scroll-mt-16;
     }

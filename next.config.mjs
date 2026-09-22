@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: 'export',
     images: {
         remotePatterns: [
             {
@@ -8,8 +9,9 @@ const nextConfig = {
                 pathname: '/icons/**',
             },
         ],
+        unoptimized: true,
     },
-    
+
     webpack(config, { isServer }) {
         const fileLoaderRule = config.module.rules.find((rule) =>
             rule.test?.test?.('.svg'),

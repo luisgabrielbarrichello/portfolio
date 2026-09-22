@@ -28,16 +28,6 @@ function Header() {
     const navLinkClasses =
         'relative cursor-pointer font-medium text-dark dark:text-white hover:text-brand dark:hover:text-brand transition-colors duration-300';
 
-    const buttonCTA = (
-        <a
-            href={getWhatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden lg:inline-flex shrink-0 whitespace-nowrap items-center px-4 py-2 rounded-md text-sm font-semibold bg-brand text-white hover:opacity-90 transition-opacity">
-            Solicitar orçamento
-        </a>
-    );
-
     return (
         <header
             className={clsx(
@@ -49,8 +39,7 @@ function Header() {
             <nav className="w-full h-16 flex items-center justify-between gap-x-6">
                 <div className="shrink-0">
                     <a
-                        href="https://www.linkedin.com/in/luisgabrielbarrichello/"
-                        target="_blank"
+                        href="#home"
                         rel="noreferrer"
                         className="flex items-center gap-x-2 text-xl md:text-2xl font-extrabold">
                         <span className="font-poppins bg-gray-800 dark:bg-white text-white dark:text-gray-900 px-2 py-0.5 rounded-md">

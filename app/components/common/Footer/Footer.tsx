@@ -37,7 +37,7 @@ const Footer = () => {
                                         href={link.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-2 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:scale-105 transition-all duration-200">
+                                        className="flex items-center gap-2 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:scale-105 transition-all duration-200 hover:font-bold">
                                         <link.icon
                                             className="w-5 h-5 shrink-0"
                                             aria-hidden="true"
@@ -56,7 +56,7 @@ const Footer = () => {
                             href="https://linkedin.com/in/luisgabrielbarrichello"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-medium font-extrabold text-brand dark:text-brand hover:underline">
+                            className="font-extrabold text-brand dark:text-white hover:underline transition-all duration-200">
                             LB.DEV
                         </a>
                     </span>

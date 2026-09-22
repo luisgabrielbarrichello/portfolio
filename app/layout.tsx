@@ -26,7 +26,7 @@ const baseUrl =
 export const metadata: Metadata = {
     metadataBase: new URL(baseUrl),
     title: {
-        default: 'Sites e Landing Pages para Empresas | Luís Gabriel',
+        default: 'LB.Dev | Sites e Landing Pages para Empresas',
         template: '%s | Luís Gabriel',
     },
     description:
@@ -50,18 +50,10 @@ export const metadata: Metadata = {
         type: 'website',
         locale: 'pt_BR',
         url: baseUrl,
-        title: 'Sites e Landing Pages para Empresas | Luís Gabriel',
+        title: 'LB.Dev | Sites e Landing Pages para Empresas',
         description:
             'Sites e landing pages profissionais para pequenos negócios apresentarem seus serviços e gerarem mais contatos.',
-        siteName: 'Luís Gabriel - Sites e Landing Pages',
-        images: [
-            {
-                url: '/assets/img/me.png',
-                width: 1200,
-                height: 630,
-                alt: 'Luís Gabriel Barrichello',
-            },
-        ],
+        siteName: 'LB.Dev | Sites e Landing Pages',
     },
     robots: {
         index: true,
@@ -80,7 +72,6 @@ export default function RootLayout({
         name: 'Luís Gabriel - Sites e Landing Pages',
         founder: 'Luís Gabriel Barrichello',
         url: baseUrl,
-        image: `${baseUrl}/assets/img/me.png`,
         description:
             'Criação de sites e landing pages profissionais para empresas e pequenos negócios.',
         areaServed: 'BR',
@@ -98,7 +89,7 @@ export default function RootLayout({
     };
 
     return (
-        <html lang="pt-br" className={`${inter.variable} ${poppins.variable}`}>
+        <html lang="pt-br" className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
             <body className="bg-white dark:bg-dark-10 text-gray-800 dark:text-white antialiased selection:bg-brand selection:text-white">
                 <script
                     type="application/ld+json"
