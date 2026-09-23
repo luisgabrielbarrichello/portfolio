@@ -7,8 +7,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: '/private',
         },
-        sitemap: '',
+        sitemap: 'https://portfolio-6ea.pages.dev/sitemap.xml',
     };
 }
