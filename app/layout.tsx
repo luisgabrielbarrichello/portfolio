@@ -54,10 +54,21 @@ export const metadata: Metadata = {
         description:
             'Sites e landing pages profissionais para pequenos negócios apresentarem seus serviços e gerarem mais contatos.',
         siteName: 'LB.Dev | Sites e Landing Pages',
+        images: ['/opengraph-image.png'],
     },
     robots: {
         index: true,
         follow: true,
+    },
+    alternates: {
+        canonical: '/',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'LB.Dev | Sites e Landing Pages para Empresas',
+        description:
+            'Sites e landing pages profissionais para pequenos negócios apresentarem seus serviços e gerarem mais contatos.',
+        images: ['/opengraph-image.png'],
     },
 };
 

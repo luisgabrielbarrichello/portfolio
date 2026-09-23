@@ -2,7 +2,7 @@
     {
         "title": "Landing Page para Nutricionista",
         "description": "Landing page moderna e responsiva com foco em geração de leads e otimização para SEO, projetada para fortalecer a presença digital de um profissional de nutrição.",
-        "image_url": "/assets/img/projects/lp-nutricionista.png",
+        "image_url": "/assets/img/projects/lp-nutricionista.webp",
         "technologies": [
             "React",
             "TailwindCSS",
@@ -21,7 +21,7 @@
     {
         "title": "Steel Sales Calculator",
         "description": "O projeto é uma calculado para Vendedores e pessoas interessadas nos calculos de construção civil, onde as pessoas tendem a ter maior dificuldade de entendimento. O projeto também é para eu conhecer e aprender o básico bootstrap, além disso, praticar meus conhecimentos.",
-        "image_url": "/assets/img/projects/steel-sales-calculator.png",
+        "image_url": "/assets/img/projects/steel-sales-calculator.webp",
         "technologies": [
             "React",
             "Typescript",
@@ -40,7 +40,7 @@
     {
         "title": "Sistema de Gestão do Museu Magma",
         "description": "Sistema de gestão completo (ERP/PDV) construído para o Museu Magma. Inclui controle de inventário, ponto de venda (PDV), gerenciamento de clientes, usuários, permissões granulares e relatórios de lucratividade.",
-        "image_url": "/assets/img/projects/museu-magma-dashboard.png",
+        "image_url": "/assets/img/projects/museu-magma-dashboard.webp",
         "technologies": [
             "React",
             "Django REST Framework",
