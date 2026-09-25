@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://portfolio-6ea.pages.dev/sitemap.xml',
+        sitemap: 'https://luisbarrichello.dev.br/sitemap.xml',
     };
 }
