@@ -58,9 +58,6 @@ dist-ssr
 # yarn-error.log* - duplicado e movido para # Logs
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
-
 # vercel
 .vercel
 

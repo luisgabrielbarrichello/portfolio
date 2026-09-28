@@ -21,7 +21,11 @@ const poppins = Poppins({
 });
 
 const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://luisbarrichello.vercel.app';
+    process.env.NEXT_PUBLIC_SITE_URL;
+
+if (!baseUrl) {
+    throw new Error('NEXT_PUBLIC_SITE_URL não está definida.');
+}
 
 export const metadata: Metadata = {
     metadataBase: new URL(baseUrl),
