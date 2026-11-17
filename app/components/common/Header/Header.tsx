@@ -2,6 +2,8 @@
 import { getWhatsappLink } from '@/app/lib/whatsapp';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
+import Button from '../Buttons/Button';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -92,27 +94,27 @@ function Header() {
                         ))}
 
                         {/* Botão dentro do menu mobile */}
-                        <li className="mt-4 md:hidden">
-                            <a
-                                href={getWhatsappLink()}
+                        <li className="flex items-center gap-3 mt-4 md:hidden">
+                            <Button
+                                content="Solicitar orçamento"
+                                pathLink={getWhatsappLink()}
+                                IconComponent={FaWhatsapp}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center whitespace-nowrap px-5 py-2.5 rounded-md text-sm font-semibold bg-brand text-white hover:opacity-90 transition-opacity">
-                                Solicitar orçamento
-                            </a>
+                                className="inline-flex items-center whitespace-nowrap px-5 py-2.5 rounded-md text-sm font-semibold bg-brand text-white hover:opacity-90 transition-opacity"
+                            />
                         </li>
                     </ul>
                 </div>
 
-                <button>
-                    <a
-                        href={getWhatsappLink()}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hidden md:inline-flex items-center shrink-0 whitespace-nowrap px-3 lg:px-4 py-2 rounded-md text-xs lg:text-sm font-semibold bg-brand text-white hover:opacity-90 transition-opacity">
-                        Solicitar orçamento
-                    </a>
-                </button>
+                <Button
+                    content="Solicitar orçamento"
+                    pathLink={getWhatsappLink()}
+                    IconComponent={FaWhatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden md:inline-flex items-center shrink-0 whitespace-nowrap px-3 lg:px-4 py-2 rounded-md text-xs lg:text-sm font-semibold bg-brand text-white hover:opacity-90 transition-opacity"
+                />
 
                 <div className="md:hidden z-50">
                     <button

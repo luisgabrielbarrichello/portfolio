@@ -40,10 +40,7 @@ function BeforeAfter() {
                     A mesma empresa, duas presenças digitais.
                 </h2>
                 <p className="mt-6 max-w-xl text-gray-600 dark:text-gray-400">
-                    Arraste para comparar.{' '}
-                    <span className="text-gray-400 dark:text-gray-600">
-                        (Exemplo demonstrativo)
-                    </span>
+                    Arraste para comparar.
                 </p>
             </div>
 
@@ -56,6 +53,9 @@ function BeforeAfter() {
                     className="relative aspect-[4/3] sm:aspect-video max-w-5xl mx-auto rounded-none sm:rounded-lg overflow-hidden border-y sm:border border-gray-200 dark:border-gray-800 select-none cursor-ew-resize touch-none shadow-xl shadow-gray-300/40 dark:shadow-black/40">
                     {/* AFTER (base) */}
                     <div className="absolute inset-0 bg-white dark:bg-dark-10 p-8 flex flex-col justify-center gap-4">
+                        <span className="absolute top-4 right-4 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-200">
+                            ● Presença LB.dev
+                        </span>
                         <span className="text-[10px] uppercase tracking-widest text-brand font-semibold">
                             Depois
                         </span>
@@ -74,6 +74,9 @@ function BeforeAfter() {
                         style={{
                             clipPath: `inset(0 ${100 - position}% 0 0)`,
                         }}>
+                        <span className="absolute top-4 left-4 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xs font-semibold px-3 py-1 rounded-full border border-gray-300 dark:border-gray-700">
+                            Sem presença digital
+                        </span>
                         <span className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">
                             Antes
                         </span>
