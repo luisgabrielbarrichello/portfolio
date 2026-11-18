@@ -22,52 +22,65 @@ function FeaturedProject({ project, onOpenModal }: FeaturedProjectProps) {
     const { title, description, image_url, homepage, case_study } = project;
 
     return (
-        <div className="flex flex-col gap-8">
-            <figure className="relative aspect-[16/9] md:aspect-[21/9] rounded-lg overflow-hidden">
+        <article className="group overflow-hidden rounded-2xl bg-white dark:bg-dark-20 border border-gray-200 dark:border-gray-800 shadow-sm transition-colors duration-300">
+            {/* Project Image */}
+            <figure className="relative aspect-[16/8] md:aspect-[21/9] overflow-hidden bg-gray-100 dark:bg-dark-10">
                 {image_url && (
                     <Image
                         src={image_url}
-                        alt={`Imagem ilustrativa do projeto "${title}"`}
-                        sizes="100vw"
-                        className="object-cover"
+                        alt={`Prévia visual do projeto ${title}`}
+                        sizes="(max-width: 768px) 100vw, 1200px"
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                         fill
                         priority
                     />
                 )}
             </figure>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                <div className="lg:col-span-8">
-                    <span className="eyebrow">Projeto principal</span>
-                    <h3 className="mt-3 font-poppins font-bold text-3xl md:text-4xl text-gray-900 dark:text-white">
-                        {title}
-                    </h3>
-                    <p className="mt-4 max-w-xl text-gray-600 dark:text-gray-400">
-                        {case_study?.problem ?? description}
-                    </p>
-                </div>
-                <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 lg:items-end">
-                    {case_study && (
-                        <Button
-                            IconComponent={IconDocument}
-                            altImage="Ver estudo de caso"
-                            variant={'ghost'}
-                            content="Ver estudo de caso"
-                            onClick={onOpenModal}
-                        />
-                    )}
-                    {homepage && (
-                        <Button
-                            target="target"
-                            variant={'outline'}
-                            content="Visualizar projeto"
-                            IconComponent={IconLink}
-                            altImage="Visualizar projeto"
-                            pathLink={homepage}
-                        />
-                    )}
+
+            {/* Project Information */}
+            <div className="p-6 sm:p-8 border-t border-gray-100 dark:border-gray-800">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div className="max-w-2xl">
+                        <span className="text-xs font-semibold uppercase tracking-widest text-brand">
+                            Projeto principal
+                        </span>
+
+                        <h3 className="mt-2 font-poppins font-bold text-2xl md:text-3xl text-gray-900 dark:text-white">
+                            {title}
+                        </h3>
+
+                        <p className="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                            {case_study?.problem ?? description}
+                        </p>
+                    </div>
+
+                    {/* Project Actions */}
+                    <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+                        {case_study && (
+                            <Button
+                                variant="ghost"
+                                content="Ver estudo de caso"
+                                IconComponent={IconDocument}
+                                altImage="Estudo de caso"
+                                onClick={onOpenModal}
+                            />
+                        )}
+
+                        {homepage && (
+                            <Button
+                                variant="outline"
+                                content="Visualizar projeto"
+                                IconComponent={IconLink}
+                                altImage="Visualizar projeto"
+                                pathLink={homepage}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            />
+                        )}
+                    </div>
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
 

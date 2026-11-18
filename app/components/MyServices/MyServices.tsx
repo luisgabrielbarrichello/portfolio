@@ -1,27 +1,29 @@
 import Button from '../common/Buttons/Button';
 import IconChat from '@/app/assets/icons/icon-chat.svg';
 import { getWhatsappLink } from '@/app/lib/whatsapp';
+import { FaArrowRightLong } from 'react-icons/fa6';
+
 
 const servicesData = [
     {
         number: '01',
         title: 'Landing Page',
         description:
-            'Uma página focada em apresentar um serviço e transformar visitantes em contatos.',
+            'Uma página focada em apresentar um serviço e transformar visitantes em contatos qualificados diretamente no WhatsApp.',
         cta: 'Quero uma Landing Page',
     },
     {
         number: '02',
         title: 'Site Institucional',
         description:
-            'Uma presença digital completa para empresas que precisam transmitir credibilidade e apresentar seus serviços.',
+            'Uma presença digital completa para empresas que precisam transmitir credibilidade, apresentar catálogo de serviços e equipe.',
         cta: 'Quero um site',
     },
     {
         number: '03',
         title: 'Evolução & Manutenção',
         description:
-            'Pequenas alterações, atualizações e suporte após a publicação.',
+            'Pequenas alterações, novas seções, melhorias contínuas de velocidade e suporte dedicado após a publicação.',
         cta: 'Quero conversar sobre manutenção',
     },
 ];
@@ -60,26 +62,43 @@ function MyServices() {
                                 href={getWhatsappLink()}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="md:col-span-2 md:text-right text-sm font-semibold text-brand hover:underline wrap">
-                                {service.cta} →
+                                className="group md:col-span-2 flex items-center justify-end gap-3 text-sm font-semibold text-brand">
+                                <span className="transition-colors duration-200 group-hover:text-brand-dark">
+                                    {service.cta}
+                                </span>
+
+                                <FaArrowRightLong className="shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
                             </a>
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-14 flex flex-col sm:flex-row sm:items-center justify-between gap-6 hairline pt-10">
-                    <p className="text-xl font-medium text-gray-800 dark:text-gray-200">
-                        Tem um projeto em mente?
-                    </p>
-                    <Button
-                        target="target"
-                        variant={'ghost'}
-                        content="Solicitar orçamento"
-                        altImage="icon chat"
-                        IconComponent={IconChat}
-                        pathLink={getWhatsappLink()}
-                        rel="noopener noreferrer"
-                    />
+                <div className="mt-14 hairline pt-10">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-white dark:bg-dark-20 border border-gray-200 dark:border-gray-800 transition-colors duration-300">
+                        <div className="max-w">
+                            <h3 className="text-lg font-poppins font-bold text-gray-900 dark:text-white">
+                                Tem um projeto em mente?
+                            </h3>
+
+                            <p className="mt-.5 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                                Receba uma proposta sem compromisso, com
+                                cronograma e escopo definidos para o seu
+                                projeto.
+                            </p>
+                        </div>
+
+                        <div className="shrink-0">
+                            <Button
+                                target="_blank"
+                                variant={'ghost'}
+                                content="Solicitar orçamento"
+                                altImage="Ícone de conversa"
+                                IconComponent={IconChat}
+                                pathLink={getWhatsappLink()}
+                                rel="noopener noreferrer"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

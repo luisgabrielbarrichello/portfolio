@@ -8,6 +8,21 @@ export default {
     ],
     theme: {
         extend: {
+            animation: {
+                'bounce-subtle': 'bounce-subtle 1s infinite',
+            },
+            keyframes: {
+                'bounce-subtle': {
+                    '0%, 100%': {
+                        transform: 'translateY(-3%)',
+                        animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+                    },
+                    '50%': {
+                        transform: 'translateY(0)',
+                        animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+                    },
+                },
+            },
             fontFamily: {
                 poppins: ['var(--font-poppins)', 'sans-serif'],
                 inter: ['var(--font-inter)', 'sans-serif'],
@@ -15,6 +30,7 @@ export default {
             colors: {
                 brand: '#2563EB',
                 'brand-dark': '#1D4ED8',
+                'brand-light': '#f6f7f9',
                 navy: '#0F1B35',
                 gold: '#B88A3B',
                 'gray-custom': '#222',

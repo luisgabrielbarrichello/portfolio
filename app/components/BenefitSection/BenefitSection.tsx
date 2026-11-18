@@ -46,7 +46,7 @@ function BenefitSection() {
                             <h3 className="mt-3 text-xl font-poppins font-bold text-gray-900 dark:text-white">
                                 {point.word}
                             </h3>
-                            <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
+                            <p className="mt-2 text-gray-500 dark:text-gray-500">
                                 {point.text}
                             </p>
                         </div>

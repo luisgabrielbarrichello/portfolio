@@ -1,55 +1,68 @@
 'use client';
+
 import { useState, useEffect } from 'react';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 
 const BackToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
-
-    const toggleVisibility = () => {
-        if (window.scrollY > 300) {
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
-    };
-
     useEffect(() => {
-        window.addEventListener('scroll', toggleVisibility);
+        const toggleVisibility = () => {
+            setIsVisible(window.scrollY > 400);
+        };
+
+        toggleVisibility();
+
+        window.addEventListener('scroll', toggleVisibility, {
+            passive: true,
+        });
+
         return () => {
             window.removeEventListener('scroll', toggleVisibility);
         };
     }, []);
 
+    const scrollToTop = () => {
+        const prefersReducedMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)',
+        ).matches;
+
+        window.scrollTo({
+            top: 0,
+            behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        });
+    };
+
     return (
         <button
+            type="button"
             onClick={scrollToTop}
+            aria-label="Voltar ao topo"
+            aria-hidden={!isVisible}
+            tabIndex={isVisible ? 0 : -1}
             className={clsx(
-                'w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300',
-                'bg-brand hover:bg-brand-dark text-white',
-                'dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-300 dark:hover:text-white',
+                'group flex h-11 w-11 shrink-0 items-center justify-center rounded-full',
+                'border border-white/10 bg-brand text-white shadow-lg shadow-brand/20',
+                'transition-all duration-300 ease-out',
+                'hover:-translate-y-1 hover:bg-brand-dark hover:shadow-xl hover:shadow-brand/30',
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-offset-[#0B1220]',
                 {
-                    'opacity-100 translate-y-0': isVisible,
-                    'opacity-0 translate-y-4 pointer-events-none': !isVisible,
+                    'visible translate-y-0 scale-100 opacity-100': isVisible,
+                    'invisible translate-y-4 scale-90 opacity-0 pointer-events-none':
+                        !isVisible,
                 },
-            )}
-            aria-label="Voltar ao topo">
+            )}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
+                className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-1"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor">
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true">
                 <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
                     d="M5 15l7-7 7 7"
                 />
             </svg>

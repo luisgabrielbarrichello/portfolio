@@ -104,7 +104,9 @@ export default function RootLayout({
     };
 
     return (
-        <html lang="pt-br" className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
+        <html
+            lang="pt-br"
+            className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
             <body className="bg-white dark:bg-dark-10 text-gray-800 dark:text-white antialiased selection:bg-brand selection:text-white">
                 <script
                     type="application/ld+json"
@@ -118,8 +120,8 @@ export default function RootLayout({
                     <main className="relative">{children}</main>
 
                     <Footer />
-                    
-                    <div className="fixed bottom-5 right-5 flex flex-col items-center gap-y-4 z-50">
+
+                    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
                         <ThemeSwitcher />
                         <BackToTopButton />
                     </div>
