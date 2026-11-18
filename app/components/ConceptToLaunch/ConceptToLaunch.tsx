@@ -1,4 +1,15 @@
-const stages = [
+type StageVisualProps = {
+    type: 'idea' | 'structure' | 'design' | 'live';
+};
+
+type Stage = {
+    number: string;
+    title: string;
+    description: string;
+    visual: StageVisualProps['type'];
+};
+
+const stages: Stage[] = [
     {
         number: '01',
         title: 'Ideia & Entendimento',
@@ -29,8 +40,7 @@ const stages = [
     },
 ];
 
-
-function StageVisual({ type }) {
+function StageVisual({ type }: StageVisualProps) {
     const visualBase =
         'w-full h-44 rounded-xl border flex items-center justify-center transition-colors duration-300';
 
@@ -95,22 +105,18 @@ function StageVisual({ type }) {
     );
 }
 
-
-
 function ConceptToLaunch() {
     return (
         <section
             id="process"
             className="py-24 md:py-36 bg-offwhite dark:bg-dark-10 transition-colors duration-300"
-            aria-labelledby="concept-heading"
-        >
+            aria-labelledby="concept-heading">
             <div className="editorial-container">
                 <span className="eyebrow">04 / Do conceito ao ar</span>
 
                 <h2
                     id="concept-heading"
-                    className="mt-4 text-4xl md:text-6xl font-bold text-gray-900 dark:text-white max-w-2xl leading-tight"
-                >
+                    className="mt-4 text-4xl md:text-6xl font-bold text-gray-900 dark:text-white max-w-2xl leading-tight">
                     Uma ideia até virar experiência.
                 </h2>
             </div>
