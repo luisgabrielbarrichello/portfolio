@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 import projectsData from '../../data/projects.json';
 import Button from '../common/Buttons/Button';
@@ -21,70 +22,80 @@ interface ProjectModalProps {
 }
 
 function Projects() {
-    const [selectedProject, setSelectedProject] =
-        useState<ProjectModalProps['project'] | null>(null);
+    const [selectedProject, setSelectedProject] = useState<
+        ProjectModalProps['project'] | null
+    >(null);
 
     const featuredProject = projectsData[0];
     const secondaryProjects = projectsData.slice(1, 4);
 
     const openModal = (project: ProjectModalProps['project']) =>
         setSelectedProject(project);
+
     const closeModal = () => setSelectedProject(null);
 
     return (
         <>
             <section
                 id="projects"
-                className="py-24 md:py-36 bg-gray-50 dark:bg-dark-20">
+                className="py-24 md:py-36 bg-offwhite dark:bg-dark-10 transition-colors duration-300">
                 <div className="editorial-container">
+                    {/* Section Header */}
                     <div className="max-w-xl">
                         <span className="eyebrow">Projetos</span>
+
                         <h2
                             id="title-section"
-                            className="mt-4 text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
+                            className="mt-4 text-4xl md:text-6xl font-bold text-gray-900 dark:text-white tracking-tight">
                             Trabalhos recentes
                         </h2>
                     </div>
 
-                    <div className="mt-16">
+                    {/* Featured Project */}
+                    <div className="mt-12 md:mt-14">
                         <FeaturedProject
                             project={featuredProject}
                             onOpenModal={() => openModal(featuredProject)}
                         />
                     </div>
 
+                    {/* Secondary Projects */}
                     {secondaryProjects.length > 0 && (
-                        <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {secondaryProjects.map((project, index) => (
-                                <div
+                        <div className="mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                            {secondaryProjects.map((project) => (
+                                <ProjectCard
                                     key={project.title}
-                                    className={
-                                        index === 0
-                                            ? 'md:col-span-2'
-                                            : 'md:col-span-1'
-                                    }>
-                                    <ProjectCard
-                                        project={project}
-                                        onOpenModal={() => openModal(project)}
-                                    />
-                                </div>
+                                    project={project}
+                                    onOpenModal={() => openModal(project)}
+                                />
                             ))}
                         </div>
                     )}
 
-                    <div className="mt-16 flex flex-col sm:flex-row sm:items-center justify-between gap-6 hairline pt-10">
-                        <p className="text-xl font-medium text-gray-800 dark:text-gray-200">
-                            Gostou do que viu?
-                        </p>
-                        <Button
-                            target="target"
-                            variant={'ghost'}
-                            content="Quero um projeto assim"
-                            altImage="icon chat"
-                            IconComponent={IconChat}
-                            pathLink={getWhatsappLink()}
-                            rel="noopener noreferrer"
-                        />
+                    {/* Bottom CTA */}
+                    <div className="mt-16 md:mt-20">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-white dark:bg-dark-20 border border-gray-200 dark:border-gray-800 transition-colors duration-300">
+                            <div>
+                                <h3 className="text-lg font-poppins font-bold text-gray-900 dark:text-white">
+                                    Gostou do que viu?
+                                </h3>
+
+                                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                                    Vamos transformar sua ideia em um projeto
+                                    digital.
+                                </p>
+                            </div>
+
+                            <Button
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                variant="ghost"
+                                content="Quero um projeto assim"
+                                altImage="Conversar pelo WhatsApp"
+                                IconComponent={IconChat}
+                                pathLink={getWhatsappLink()}
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

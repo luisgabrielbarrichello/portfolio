@@ -100,7 +100,7 @@ function StageVisual({ type }) {
 function ConceptToLaunch() {
     return (
         <section
-            id="concept-to-launch"
+            id="process"
             className="py-24 md:py-36 bg-offwhite dark:bg-dark-10 transition-colors duration-300"
             aria-labelledby="concept-heading"
         >

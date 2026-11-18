@@ -1,6 +1,8 @@
 import Button from '../common/Buttons/Button';
 import IconChat from '@/app/assets/icons/icon-chat.svg';
 import { getWhatsappLink } from '@/app/lib/whatsapp';
+import { FaArrowRightLong } from 'react-icons/fa6';
+
 
 const servicesData = [
     {
@@ -60,8 +62,12 @@ function MyServices() {
                                 href={getWhatsappLink()}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="md:col-span-2 md:text-right text-sm font-semibold text-brand hover:underline wrap">
-                                {service.cta} →
+                                className="group md:col-span-2 flex items-center justify-end gap-3 text-sm font-semibold text-brand">
+                                <span className="transition-colors duration-200 group-hover:text-brand-dark">
+                                    {service.cta}
+                                </span>
+
+                                <FaArrowRightLong className="shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
                             </a>
                         </div>
                     ))}
