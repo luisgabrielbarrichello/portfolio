@@ -27,7 +27,7 @@ function Projects() {
     >(null);
 
     const featuredProject = projectsData[0];
-    const secondaryProjects = projectsData.slice(1, 4);
+    const secondaryProjects = projectsData.slice(1, 3);
 
     const openModal = (project: ProjectModalProps['project']) =>
         setSelectedProject(project);

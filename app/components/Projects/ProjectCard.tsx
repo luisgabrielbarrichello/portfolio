@@ -20,15 +20,31 @@ function ProjectCard({ project, onOpenModal }: ProjectCardProps) {
         <article className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white dark:bg-dark-20 border border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
             {/* Project Image */}
             <figure className="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-dark-10">
-                {image_url && (
-                    <Image
-                        src={image_url}
-                        alt={`Prévia visual do projeto ${title}`}
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                        fill
-                    />
-                )}
+                {image_url &&
+                    (homepage ? (
+                        <a
+                            href={homepage}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Visitar o site do projeto ${title}`}
+                            className="absolute inset-0 block">
+                            <Image
+                                src={image_url}
+                                alt={`Prévia visual do projeto ${title}`}
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                                fill
+                            />
+                        </a>
+                    ) : (
+                        <Image
+                            src={image_url}
+                            alt={`Prévia visual do projeto ${title}`}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                            fill
+                        />
+                    ))}
             </figure>
 
             {/* Project Information */}
