@@ -1,5 +1,26 @@
 [
     {
+        "title": "BC Higienizações - Landing Page",
+        "description": "Landing page profissional desenvolvida para um negócio de higienização de estofados, com design moderno, responsivo e foco na apresentação dos serviços e geração de contatos por WhatsApp.",
+        "image_url": "/assets/img/projects/brunocarvalhohigienizacoes.webp",
+        "technologies": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Vite"
+        ],
+        "homepage": "https://brunocarvalhohigienizacoes.pages.dev/",
+        "url_github": "https://github.com/luisgabrielbarrichello/bc-higienizacoes-landing-page",
+        "featured": true,
+        "case_study": {
+            "problem": "O negócio precisava de uma presença digital profissional para apresentar seus serviços de higienização, transmitir confiança aos potenciais clientes e facilitar o contato para solicitação de orçamentos.",
+            "solution": "Desenvolvi uma landing page personalizada, com identidade visual própria, layout responsivo, apresentação estratégica dos serviços, seção de resultados antes e depois, diferenciais e múltiplos pontos de contato via WhatsApp. O projeto também conta com animações para tornar a experiência de navegação mais dinâmica.",
+            "learnings": "Aprimorei minhas habilidades na criação de interfaces responsivas com React e Tailwind CSS, organização e reutilização de componentes, implementação de animações, estruturação de páginas com foco em conversão e publicação de projetos utilizando Cloudflare Pages."
+        },
+        "category": "Front End"
+    },
+    {
         "title": "Landing Page para Nutricionista",
         "description": "Landing page moderna e responsiva com foco em geração de leads e otimização para SEO, projetada para fortalecer a presença digital de um profissional de nutrição.",
         "image_url": "/assets/img/projects/lp-nutricionista.webp",
